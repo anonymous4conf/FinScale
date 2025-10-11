@@ -4,29 +4,29 @@
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Research Artifact for SIGMOD 2026 Submission**
->
-> **Paper:** "FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation"
->
-> **Submission Track:** Data-Intensive Applications & Systems
+**Research Artifact for SIGMOD 2026 Submission**
+
+Paper: "FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation"
+
+Submission Track: Data-Intensive Applications & Systems
 
 ---
 
-## 🎯 Artifact Overview
+## Artifact Overview
 
-This repository contains the **complete research artifact** for our SIGMOD 2026 submission, including:
+This repository contains the complete research artifact for our SIGMOD 2026 submission, including:
 
-- ✅ **Full implementation** of the FinScale system
-- ✅ **Reproducible experiments** with detailed examples
-- ✅ **FinMultiTime dataset** access (112GB multi-modal financial data on Hugging Face)
-- ✅ **Comprehensive test suite** with validation scripts
-- ✅ **Detailed documentation** for artifact evaluation
+- Full implementation of the FinScale system
+- Reproducible experiments with detailed examples
+- Access to FinMultiTime dataset (112GB multi-modal financial data on Hugging Face)
+- Comprehensive test suite with validation scripts
+- Detailed documentation for artifact evaluation
 
-**Estimated Time for Artifact Evaluation:** ~6-8 hours (including dataset download and experiments)
+Estimated time for artifact evaluation: approximately 6-8 hours (including dataset download and experiments)
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Quick Start for Reviewers](#quick-start-for-reviewers)
 - [Artifact Claims](#artifact-claims)
@@ -41,9 +41,9 @@ This repository contains the **complete research artifact** for our SIGMOD 2026 
 
 ---
 
-## 🚀 Quick Start for Reviewers
+## Quick Start for Reviewers
 
-**For rapid evaluation, follow these steps:**
+For rapid evaluation, follow these steps:
 
 ```bash
 # 1. Clone and setup environment (5 minutes)
@@ -63,42 +63,42 @@ python examples/basic_usage.py
 python examples/cross_market_transfer.py
 ```
 
-**Expected Outputs:**
+Expected outputs:
 - Test suite: All 11 tests pass
 - Basic example: Model trains and produces predictions
 - Transfer example: Cross-market transfer results demonstrate zero-shot capabilities
 
 ---
 
-## 🏆 Artifact Claims
+## Artifact Claims
 
-We claim the following contributions are **fully reproducible** with this artifact:
+The following contributions are fully reproducible with this artifact:
 
-### 1. **Performance Claims (Paper Section 5.1, Table 2)**
-- ✅ 64.2±0.6% accuracy on return prediction with 1.52 Sharpe ratio
-- ✅ 76.1±0.8% F1-score on volatility regime classification
-- ✅ 71.3±0.7% accuracy on earnings surprise prediction with 0.91 precision@10
-- ✅ 40% computational cost reduction (4,893 vs 8,142 tokens compared to s1-32B)
+### 1. Performance Claims (Paper Section 5.1, Table 2)
+- 64.2±0.6% accuracy on return prediction with 1.52 Sharpe ratio
+- 76.1±0.8% F1-score on volatility regime classification
+- 71.3±0.7% accuracy on earnings surprise prediction with 0.91 precision@10
+- 40% computational cost reduction (4,893 vs 8,142 tokens compared to s1-32B)
 
-### 2. **Efficiency Claims (Paper Section 5.2, Table 3)**
-- ✅ 187ms average inference latency
-- ✅ 15.8GB peak memory usage (single GPU deployment)
-- ✅ 124.7 GFLOPs computational cost
-- ✅ Superior efficiency score (0.138 vs 0.073 for s1-32B)
+### 2. Efficiency Claims (Paper Section 5.2, Table 3)
+- 187ms average inference latency
+- 15.8GB peak memory usage (single GPU deployment)
+- 124.7 GFLOPs computational cost
+- Superior efficiency score (0.138 vs 0.073 for s1-32B)
 
-### 3. **Transfer Learning Claims (Paper Section 5.3, Table 4)**
-- ✅ 52.9% average zero-shot accuracy on cross-market transfer (5 international markets)
-- ✅ 53.8-54.6% accuracy range across different markets (Nikkei, FTSE, DAX, BSE, KOSPI)
-- ✅ 82.4% performance retention (% of original accuracy maintained in zero-shot)
+### 3. Transfer Learning Claims (Paper Section 5.3, Table 4)
+- 52.9% average zero-shot accuracy on cross-market transfer (5 international markets)
+- 53.8-54.6% accuracy range across different markets (Nikkei, FTSE, DAX, BSE, KOSPI)
+- 82.4% performance retention (% of original accuracy maintained in zero-shot)
 
-### 4. **Adaptive Allocation Claims (Paper Section 5.4, Figure 5)**
-- ✅ Dynamic allocation patterns across market regimes
-- ✅ Information-theoretic optimality guarantees
-- ✅ Regime-specific resource distribution
+### 4. Adaptive Allocation Claims (Paper Section 5.4, Figure 5)
+- Dynamic allocation patterns across market regimes
+- Information-theoretic optimality guarantees
+- Regime-specific resource distribution
 
 ---
 
-## 💻 System Requirements
+## System Requirements
 
 ### Minimum Requirements (for testing and examples)
 - **CPU:** 4+ cores (Intel i5 or equivalent)
@@ -115,15 +115,15 @@ We claim the following contributions are **fully reproducible** with this artifa
 - **OS:** Ubuntu 20.04+ or CentOS 7+
 - **CUDA:** 11.8+ (for GPU acceleration)
 
-**Tested Environments:**
-- ✅ Ubuntu 20.04 LTS + NVIDIA A100 (40GB)
-- ✅ Ubuntu 22.04 LTS + NVIDIA V100 (32GB)
-- ✅ Windows 11 + CPU only (slower but functional)
-- ✅ macOS 13 + CPU only (for testing)
+Tested environments:
+- Ubuntu 20.04 LTS + NVIDIA A100 (40GB)
+- Ubuntu 22.04 LTS + NVIDIA V100 (32GB)
+- Windows 11 + CPU only (slower but functional)
+- macOS 13 + CPU only (for testing)
 
 ---
 
-## 🔧 Installation Guide
+## Installation Guide
 
 ### Step 1: Clone and Setup Environment
 
@@ -151,12 +151,12 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}')"
 python -c "import transformers; print(f'Transformers: {transformers.__version__}')"
 ```
 
-**Dependencies include:**
+Main dependencies:
 - PyTorch 2.0+ (deep learning framework)
 - Transformers 4.30+ (for FinBERT and pre-trained models)
 - NumPy, Pandas, Scikit-learn (data processing)
 - Matplotlib, Seaborn, Plotly (visualization)
-- And more (see `requirements.txt` for full list)
+- See requirements.txt for complete list
 
 ### Step 3: Verify Installation
 
@@ -181,22 +181,22 @@ python test_finscale.py
 
 ### Troubleshooting
 
-**Common Issues:**
+Common issues:
 
-1. **CUDA not available:** The system works on CPU (slower but functional for testing)
-2. **Out of memory:** Reduce batch size when running examples (edit the .py files)
-3. **Missing dependencies:** Ensure you're in the virtual environment and run `pip install -r requirements.txt` again
-4. **Import errors:** Make sure to install the package: `pip install -e .`
+1. CUDA not available: The system works on CPU (slower but functional for testing)
+2. Out of memory: Reduce batch size when running examples (edit the .py files)
+3. Missing dependencies: Ensure you're in the virtual environment and run `pip install -r requirements.txt` again
+4. Import errors: Make sure to install the package: `pip install -e .`
 
 ---
 
-## 📊 Dataset Access
+## Dataset Access
 
 ### FinMultiTime Dataset
 
-The **FinMultiTime** dataset is a large-scale multi-modal financial benchmark publicly available on Hugging Face.
+The FinMultiTime dataset is a large-scale multi-modal financial benchmark publicly available on Hugging Face.
 
-**🤗 Dataset Repository:** [Wenyan0110/Multimodal-Dataset-Image_Text_Table_TimeSeries-for-Financial-Time-Series-Forecasting](https://huggingface.co/datasets/Wenyan0110/Multimodal-Dataset-Image_Text_Table_TimeSeries-for-Financial-Time-Series-Forecasting)
+Dataset repository: [Wenyan0110/Multimodal-Dataset-Image_Text_Table_TimeSeries-for-Financial-Time-Series-Forecasting](https://huggingface.co/datasets/Wenyan0110/Multimodal-Dataset-Image_Text_Table_TimeSeries-for-Financial-Time-Series-Forecasting)
 
 ### Dataset Statistics
 
@@ -208,11 +208,11 @@ The **FinMultiTime** dataset is a large-scale multi-modal financial benchmark pu
 | **Price Series** | Continuous | High-frequency OHLCV data with 10 features |
 | **Total Size** | ~112GB | Processed and indexed data |
 
-**Market Coverage:**
-- 📈 **5,105 stocks** (S&P 500: 4,213 | CSI 300: 892)
-- 📅 **Time range:** 2009-2025 (training: 2009-2020, validation: 2021-2022, test: 2023-2025)
-- 🌍 **Exchanges:** NYSE, NASDAQ, SSE, SZSE
-- 💼 **Sectors:** All major sectors (Technology, Finance, Healthcare, etc.)
+Market coverage:
+- 5,105 stocks (S&P 500: 4,213 | CSI 300: 892)
+- Time range: 2009-2025 (training: 2009-2020, validation: 2021-2022, test: 2023-2025)
+- Exchanges: NYSE, NASDAQ, SSE, SZSE
+- Sectors: All major sectors (Technology, Finance, Healthcare, etc.)
 
 ### Dataset Structure on Hugging Face
 
@@ -235,7 +235,7 @@ Wenyan0110/Multimodal-Dataset-Image_Text_Table_TimeSeries-for-Financial-Time-Ser
 
 ### Download Instructions
 
-**Option 1: Using Hugging Face Hub (Recommended)**
+Option 1: Using Hugging Face Hub (recommended)
 
 ```bash
 # Install huggingface_hub
@@ -292,7 +292,7 @@ dataset = FinMultiTimeDataset(
 
 ---
 
-## 🔬 Reproducing Key Results
+## Reproducing Key Results
 
 ### Overview
 
@@ -300,23 +300,23 @@ The provided examples demonstrate the core capabilities of FinScale. Each exampl
 
 ### Experiment 1: Basic Training and Prediction
 
-**File:** `examples/basic_usage.py`
+File: `examples/basic_usage.py`
 
-**What it demonstrates:**
+What it demonstrates:
 - Model initialization with FinScaleConfig
 - Training loop with synthetic data
 - Prediction with adaptive allocation
 - Market regime adaptation
 
-**How to run:**
+How to run:
 
 ```bash
 python examples/basic_usage.py
 ```
 
-**Expected runtime:** 10-15 minutes (with synthetic data)
+Expected runtime: 10-15 minutes (with synthetic data)
 
-**Expected output:**
+Expected output:
 ```
 Initializing FinScale model...
 Creating synthetic data...
@@ -629,7 +629,7 @@ FinScale is built as a **modular data-intensive system** designed for real-time 
 
 ---
 
-## 🔗 Database System Integration
+## Database System Integration
 
 ### Conceptual Integration with Database Systems
 
@@ -678,7 +678,7 @@ FinScale can work with:
 
 ---
 
-## 📖 Additional Documentation
+## Additional Documentation
 
 ### API Reference
 
@@ -722,7 +722,7 @@ For detailed API documentation, see inline docstrings in the source code.
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use FinScale in your research, please cite:
 
@@ -740,34 +740,34 @@ If you use FinScale in your research, please cite:
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 The FinMultiTime dataset is separately licensed and maintained by Wenyan0110 on Hugging Face.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **Dataset:** FinMultiTime dataset by Wenyan0110, publicly available on Hugging Face
-- **Pre-trained Models:** FinBERT for financial text processing
-- **Infrastructure:** [Anonymized for review]
-- **Baselines:** We thank the authors of GPT-4, Claude-3, and FinGPT for their publicly available models
-- **Community:** We thank the SIGMOD community for their valuable feedback
+- Dataset: FinMultiTime dataset by Wenyan0110, publicly available on Hugging Face
+- Pre-trained Models: FinBERT for financial text processing
+- Infrastructure: [Anonymized for review]
+- Baselines: We thank the authors of the baseline methods for their publicly available implementations
+- Community: We thank the SIGMOD community for their valuable feedback
 
 ---
 
-## 📬 Contact (Anonymized for Review)
+## Contact (Anonymized for Review)
 
 For questions regarding artifact evaluation:
-- 🐛 **Issues:** https://github.com/anonymous4conf/FinScale/issues
-- 📖 **Documentation:** See inline comments in source code
-- 💬 **Repository:** https://github.com/anonymous4conf/FinScale
+- Issues: https://github.com/anonymous4conf/FinScale/issues
+- Documentation: See inline comments in source code
+- Repository: https://github.com/anonymous4conf/FinScale
 
 ---
 
-## ⚠️ Anonymization Notice
+## Anonymization Notice
 
 This repository has been anonymized for double-blind review:
 - Author names and affiliations removed
@@ -775,13 +775,13 @@ This repository has been anonymized for double-blind review:
 - Email addresses anonymized
 - Funding sources generalized
 
-**Note for Reviewers:** This artifact will be made fully public upon acceptance with complete attribution.
+Note for reviewers: This artifact will be made fully public upon acceptance with complete attribution.
 
 ---
 
-## ✅ Artifact Evaluation Checklist
+## Artifact Evaluation Checklist
 
-**For SIGMOD reviewers evaluating this artifact:**
+For SIGMOD reviewers evaluating this artifact:
 
 ### Quick Validation (~1 hour)
 - [ ] Clone repository successfully
@@ -813,24 +813,24 @@ This repository has been anonymized for double-blind review:
 - [ ] Verify theoretical components match paper
 - [ ] Assess reproducibility and extensibility
 
-**Estimated Total Evaluation Time:** 7-11 hours
+Estimated total evaluation time: 7-11 hours
 
-**Minimal Evaluation (for time-constrained reviewers):** Steps 1-2 only (~3 hours)
+Minimal evaluation (for time-constrained reviewers): Steps 1-2 only (approximately 3 hours)
 
 ---
 
-## 📊 Reproducibility Statement
+## Reproducibility Statement
 
-This artifact is designed for **computational reproducibility**:
+This artifact is designed for computational reproducibility:
 
-- ✅ **Code availability:** Full source code provided
-- ✅ **Data availability:** Public dataset on Hugging Face
-- ✅ **Environment:** Requirements.txt with specific versions
-- ✅ **Examples:** Two complete runnable examples
-- ✅ **Tests:** Comprehensive test suite
-- ✅ **Documentation:** Detailed README and inline comments
+- Code availability: Full source code provided
+- Data availability: Public dataset on Hugging Face
+- Environment: Requirements.txt with specific versions
+- Examples: Two complete runnable examples
+- Tests: Comprehensive test suite
+- Documentation: Detailed README and inline comments
 
-**Limitations:**
+Limitations:
 - Exact numerical results may vary slightly due to:
   - Random initialization (can be fixed with seeds)
   - Hardware differences (GPU vs CPU)
@@ -838,10 +838,12 @@ This artifact is designed for **computational reproducibility**:
 - Full-scale experiments require substantial compute resources (GPU recommended)
 - Synthetic data used in examples for speed; real data experiments take longer
 
-**We expect results to be within ±2-3% of reported values** when using the same random seeds and similar hardware.
+We expect results to be within ±2-3% of reported values when using the same random seeds and similar hardware.
 
 ---
 
-**Last Updated:** 2025-10-11
-**Artifact Version:** 1.0.0
-**Repository:** https://github.com/anonymous4conf/FinScale
+Last updated: 2025-10-11
+
+Artifact version: 1.0.0
+
+Repository: https://github.com/anonymous4conf/FinScale
