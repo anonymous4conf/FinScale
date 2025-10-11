@@ -1,14 +1,10 @@
 # FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 **Research Artifact for SIGMOD 2026 Submission**
 
 Paper: "FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation"
 
-Submission Track: Data-Intensive Applications & Systems
+Submission Track: Modern AI & Data Management -> Systems for AI
 
 ---
 
@@ -330,30 +326,30 @@ Predictions shape: torch.Size([16, 2])
 Allocation: [0.283, 0.241, 0.198, 0.278]  # [news, tables, charts, prices]
 ```
 
-**Key observations:**
+Key observations:
 - Model converges within 10 epochs
 - Allocation adapts based on input data
 - Different market regimes produce different allocation patterns
 
 ### Experiment 2: Cross-Market Transfer Learning
 
-**File:** `examples/cross_market_transfer.py`
+File: `examples/cross_market_transfer.py`
 
-**What it demonstrates:**
+What it demonstrates:
 - Training on source market (US)
 - Zero-shot transfer to target markets (China, Europe, Japan)
 - Few-shot fine-tuning with limited samples
 - Transfer performance visualization
 
-**How to run:**
+How to run:
 
 ```bash
 python examples/cross_market_transfer.py
 ```
 
-**Expected runtime:** 15-20 minutes (with synthetic data)
+Expected runtime: 15-20 minutes (with synthetic data)
 
-**Expected output:**
+Expected output:
 ```
 Training source model on US_market...
 Epoch 1/20: Train Loss=0.6451, Train Acc=0.6089, Val Acc=0.6156
@@ -372,14 +368,14 @@ Zero-shot transfer accuracy to Japanese_market: 0.5571
 Transfer learning visualization saved as 'transfer_learning_results.png'
 ```
 
-**Key observations:**
+Key observations:
 - Zero-shot transfer achieves >50% accuracy without target market training
 - Fine-tuning with just 10 samples improves accuracy significantly
 - Cross-market transfer bounds are validated empirically
 
 ---
 
-## 📊 Paper Results Summary
+## Paper Results Summary
 
 This section summarizes the key experimental results from the paper. All numbers are directly from the paper's tables.
 
