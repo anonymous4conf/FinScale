@@ -1,8 +1,8 @@
-# FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation
+# Adaptive Test-Time Scaling for Financial Reasoning
 
 **Research Artifact for SIGMOD 2026 Submission**
 
-Paper: "FinScale: Real-Time Financial Analysis with Adaptive Resource Allocation"
+Paper: "Adaptive Test-Time Scaling for Financial Reasoning"
 
 Submission Track: Modern AI & Data Management -> Systems for AI
 
